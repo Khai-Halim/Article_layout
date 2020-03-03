@@ -1,0 +1,1 @@
+Creating a basic layout for an article.
