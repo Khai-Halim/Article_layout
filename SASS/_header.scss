@@ -1,0 +1,39 @@
+#header{
+    display: flex;
+    justify-content: space-between;
+
+        span{     
+            a{
+                font-size: 1.8rem;
+                display: block;
+                text-decoration: none;
+                color: $white;
+                padding-top: 9px;
+            }
+        }
+    
+    
+    ul{
+        li{
+            display: inline-block;
+            a{
+                display: block;
+                text-decoration: none;
+                padding: 17px 23px;
+                background: $black;
+                color: $white;
+                &:hover{
+                    color: gold;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 800px){
+
+    #header{
+        flex-direction: column;
+        text-align: center;
+    }
+}
