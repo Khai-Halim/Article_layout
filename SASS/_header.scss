@@ -12,6 +12,7 @@
             padding-top: 9px;
         }
     }
+
     /* checkbox to make mobile menu appear*/
     #menu{
         display: none;
@@ -30,28 +31,38 @@
             cursor: pointer;
             position: absolute;
             right: 20px;
-            top: 5px;
-            z-index: 99;
-            border: solid white;
-            height: 30px;
-            width: 40px;
-            background: white;   
+            top: 10px;
+            z-index: 99;  
+            border: grey;
 
             >span{
                 display: block;
-                height: 100%;
-                width: 100%;
-                background: black;
-                
+                height: 3px;
+                width: 40px;
+                background: white;
+                margin: 10px 0;
+                &::before{
+                    content: "";
+                    display: block;
+                    height: 3px;
+                    width: 40px;
+                    background: white;
+                    transform: translateY(-10px);
+                }
+                &::after{
+                    content: "";
+                    display: block;
+                    height: 3px;
+                    width: 40px;
+                    background: white;
+                    transform: translateY(7px);
+                }
             }
     }
  
     nav{
-        
-        ul{
-            
-            li{
-                
+        ul{  
+            li{   
                 display: inline-block;
                 a{      
                     display: block;
@@ -73,15 +84,12 @@
     #header{ 
         flex-direction: column;
         //text-align: center;
-
-        #menu{
+        /*#menu{
             display: initial;
-        }
-
+        }*/
         #hamburger{
             display: block;
         }
-
         nav{
             display: none;
             height: 100vh;

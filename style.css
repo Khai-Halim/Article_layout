@@ -60,19 +60,37 @@ p {
   cursor: pointer;
   position: absolute;
   right: 20px;
-  top: 5px;
+  top: 10px;
   z-index: 99;
-  border: solid white;
-  height: 30px;
-  width: 40px;
-  background: white;
+  border: grey;
 }
 
 #header #hamburger > span {
   display: block;
-  height: 100%;
-  width: 100%;
-  background: black;
+  height: 3px;
+  width: 40px;
+  background: white;
+  margin: 10px 0;
+}
+
+#header #hamburger > span::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 40px;
+  background: white;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+#header #hamburger > span::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 40px;
+  background: white;
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
 }
 
 #header nav ul li {
@@ -97,9 +115,9 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  #header #menu {
-    display: initial;
+    /*#menu{
+            display: initial;
+        }*/
   }
   #header #hamburger {
     display: block;
